@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/react_movie_test/static/js/main.e81da66b.js",
-    "index.html": "/react_movie_test/index.html",
-    "main.e81da66b.js.map": "/react_movie_test/static/js/main.e81da66b.js.map"
+    "main.js": "/react_movie_test.git/static/js/main.e81da66b.js",
+    "index.html": "/react_movie_test.git/index.html",
+    "main.e81da66b.js.map": "/react_movie_test.git/static/js/main.e81da66b.js.map"
   },
   "entrypoints": [
     "static/js/main.e81da66b.js"

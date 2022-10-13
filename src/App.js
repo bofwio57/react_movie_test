@@ -144,17 +144,17 @@ import Home from "./routes/Home";
 //무비
 function App() {
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Switch>
-                <Route
-                    path={process.env.PUBLIC_URL + "/abot-us"}
-                    element={<h1>Hello</h1>}
-                />
-                <Route
-                    path={process.env.PUBLIC_URL + "/movie/:id"}
-                    element={<Detail />}
-                />
-                <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+                <Route path="/abot-us">
+                    <h1>Hello</h1>
+                </Route>
+                <Route path="/movie/:id">
+                    <Detail />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
             </Switch>
         </Router>
     );

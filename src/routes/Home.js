@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import Loading from "./Loading";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -34,22 +35,23 @@ function Home() {
         /* movies.map((아무거나)  */
         <div className={styles.container}>
             {loading ? (
-                <div className={styles.loader}>
-                    <span>Loading...</span>
-                </div>
+                <Loading />
             ) : (
-                <div className={styles.movies}>
-                    {movies.map((movie) => (
-                        <Movie
-                            key={movie.id}
-                            id={movie.id}
-                            year={movie.year}
-                            medium_cover_image={movie.medium_cover_image}
-                            title={movie.title}
-                            summary={movie.summary}
-                            genres={movie.genres}
-                        />
-                    ))}
+                <div>
+                    <header className={styles.header}>
+                        <h1>MOVIE</h1>
+                    </header>
+                    <main className={styles.movies}>
+                        {movies.map((movie) => (
+                            <Movie
+                                key={movie.id}
+                                id={movie.id}
+                                medium_cover_image={movie.medium_cover_image}
+                                title={movie.title}
+                                genres={movie.genres}
+                            />
+                        ))}
+                    </main>
                 </div>
             )}
         </div>
